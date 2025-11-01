@@ -16,9 +16,14 @@ nextBtn.addEventListener("click", onNextClick)
 proceedBtn.addEventListener('click', onProceedBtn)
 
 let namesOfPlayers = []
-function onNextClick() {
+
+function addPlayerName() {
     namesOfPlayers.push(nameOfPlayer.value)
     nameOfPlayer.value = ""
+}
+
+function onNextClick() {
+    addPlayerName()
     if (namesOfPlayers.length === numOfPlayers - 1) {
         nextBtn.classList.add('hidden')
         proceedBtn.classList.remove('hidden')
@@ -26,6 +31,7 @@ function onNextClick() {
 }
 
 function onProceedBtn() {
+    addPlayerName()
     sessionStorage.setItem('namesOfPlayers', JSON.stringify(namesOfPlayers))
     sessionStorage.getItem('namesOfPlayers')
 }

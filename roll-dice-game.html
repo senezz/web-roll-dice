@@ -15,41 +15,26 @@
     </div>
     <div>
         <span>Score</span>
-        <span>6</span>
+        <span id="num-score">0</span>
     </div>
     <div>
-        <img src="./assets/DICE_2.svg" alt="first-dice">
-        <img src="./assets/DICE_5.svg" alt="second-dice">
+        <img src="./assets/DICE_1.svg" alt="first-dice" class="dice-img">
+        <img src="./assets/DICE_5.svg" alt="second-dice" class="dice-img">
     </div>
-    <table>
+    <table id="players-table">
         <thead>
         <tr>
             <th scope="col">Name</th>
-            <th scope="col">R1</th>
-            <th scope="col">R2</th>
-            <th scope="col">R3</th>
+            <th class="round-cols" scope="col">R1</th>
+            <th class="round-cols" scope="col">R2</th>
+            <th class="round-cols" scope="col">R3</th>
             <th scope="col">Total</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">Player 1</th>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <th scope="row">Player 2</th>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-    </tbody>
+            
+        </tbody>
     </table>
-    <span>Clicker</span>
-    <span id="counter">0</span>
     <button class="btns-roll" id="rollForPlayerBtn">Roll for Player</button>
     <script src="./main.js"></script>
     <script src="./game.js"></script>
