@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Roll dice game</title>
 </head>
 <body>
@@ -10,8 +11,12 @@
         <h1>Roll Dice</h1>
     </div>
     <div>
-        <button>Restart</button>
-        <button>Menu</button>
+        <button class="restart-btn">
+            <img src="./assets/restart_icon.svg" alt="restart-game">
+        </button>
+        <button class="menu-btn">
+            <img src="./assets/menu_icon.svg" alt="back-to-menu">
+        </button>
     </div>
     <div>
         <span>Score</span>
@@ -25,9 +30,9 @@
         <thead>
         <tr>
             <th scope="col">Name</th>
-            <th class="round-cols" scope="col">R1</th>
-            <th class="round-cols" scope="col">R2</th>
-            <th class="round-cols" scope="col">R3</th>
+            <th class="round-cols" scope="col">Round 1</th>
+            <th class="round-cols" scope="col">Round 2</th>
+            <th class="round-cols" scope="col">Round 3</th>
             <th scope="col">Total</th>
         </tr>
         </thead>
@@ -37,6 +42,6 @@
     </table>
     <button class="btns-roll" id="rollForPlayerBtn">Roll for Player</button>
     <script src="./main.js"></script>
-    <script src="./game.js"></script>
+    <script type="module" src="./game.js"></script>
 </body>
 </html>

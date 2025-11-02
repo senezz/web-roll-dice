@@ -1,5 +1,8 @@
-const rollForPlayerBtn = document.getElementById("rollForPlayerBtn")
+import { gotoPage } from "./helper.js"
 
+const rollForPlayerBtn = document.getElementById("rollForPlayerBtn")
+const menuBtn = document.getElementsByClassName("menu-btn")[0]
+const restartBtn = document.getElementsByClassName("restart-btn")[0]
 const namesOfPlayersString = sessionStorage.getItem('namesOfPlayers')
 const namesOfPlayers = JSON.parse(namesOfPlayersString)
 console.log(namesOfPlayers)
@@ -15,6 +18,8 @@ const GAME = {
     TURN: 0,        // index of player
 }
 rollForPlayerBtn.addEventListener('click', nextTurn)
+menuBtn.addEventListener("click", returnToMenuBtn)
+restartBtn.addEventListener("click", restartGameBtn)
 
 function getRolledDice() {
     let firstDie = Math.ceil(Math.random() * 6)
@@ -90,7 +95,7 @@ function updatePlayerRoundTable() {
     const roundCols = thead.querySelectorAll('.round-cols')
     const firstRoundCol = roundCols[0]
     const lastRoundCol = roundCols[roundCols.length - 1]
-    const newRoundCol = `<th class="round-cols" scope="col">R${GAME.ROUND + 1}</th>`
+    const newRoundCol = `<th class="round-cols" scope="col">Round ${GAME.ROUND + 1}</th>`
     lastRoundCol.insertAdjacentHTML("afterend", newRoundCol)
     firstRoundCol.remove()
 }
@@ -117,16 +122,10 @@ function getWinner() {
     return winner
 }
 
-function gotoPage(pageName) {
-    const paths = window.location.pathname.split('/')
-    paths[paths.length - 1] = pageName
-    window.location.pathname = paths.join('/')
-}
-
 function announceWinner() {
     const winner = getWinner()
     sessionStorage.setItem("winner", JSON.stringify(winner))
-    gotoPage('/announce-winner.html')
+    gotoPage('announce-winner.html')
 }
 
 function initTable() {
@@ -143,6 +142,15 @@ function initTable() {
         tbody.insertAdjacentHTML('beforeend', row);
     }
 }
+
+function restartGameBtn() {
+gotoPage("roll-dice-game.html")
+}
+
+function returnToMenuBtn() {
+gotoPage("index.html")
+}
+
 
 function main() {
     rollForPlayerBtn.innerText = `Roll for ${players[0].name}`
