@@ -1,6 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
 html, body {
     margin: 0;
     padding: 0;
+    font-family: "Inria Serif", serif;
+}
+
+* {
+    font-family: "Inria Serif", serif;
 }
 
 body {
@@ -22,36 +33,218 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 footer > a {
-    width: 80%;
-    max-width: 400px;
-    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
 
 footer button {
-    width: 100%;
     border: none;
     background-color: #B21717;
     color: #ffffff;
     height: 60px;
+    width: 80%;
+    max-width: 400px;
+    font: 20px bold; 
 }
 
 main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
+}
+
+.announce-winner {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 20% 50px 1fr;
+    justify-items: center;
 }
 
 main > span {
-    margin-top: 60px;
-    
+    text-align: center;
 }
 
 main > p {
     width: 90%;
     max-width: 400px;
     margin-top: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+.cat-gif {
+    border: 2px solid#B21717;
+    border-radius: 10px;
+    height: 75%;
+}
+
+#winnerName {
+    font-size: 32px
+}
+
+#winnerText {
+    font-size: 36px;
+    color: #A6C300;
+    align-self: end;
+    margin-bottom: 50px;
+}
+
+label {
+    margin-top: 90px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.count-of-players-input:checked + .count-of-players {
+    background: #B21717;
+    color: #ffffff;
+}
+
+.count-of-players-input {
+    appearance: none;
+}
+
+.name-of-players {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    width: 100%;
+    
+}
+
+.name-of-players > div {
+    max-width: 150px;
+    width: 25%;
+}
+
+.count-of-players {
+    display: flex;
+    border: 2px solid #B21717;
+    color: #B21717;
+    height: 80px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    align-self: center;
+}
+
+
+#name-of-player {
+    margin-top: 50px;
+    border: 2px solid #B21717;
+    height: 45px;
+    width: 260px;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 20px;
+    letter-spacing: 2px;
+}
+
+#name-of-player::placeholder {
+    color: #B21717;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 0px;
+    letter-spacing: 1px;
+}
+
+#name-of-player:focus::placeholder {
+  color: transparent;
+}
+ 
+.roll-dice-game {
+    display: grid;
+    align-items: baseline;
+    justify-content: normal;
+    width: 100%;
+    grid-template-rows: 80px 20% 1fr 1fr;
+}
+
+.nav-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu-btn {
+    margin-right: 20px;
+    border: none;
+    background: none;
+}
+
+.restart-btn {
+    margin-left: 20px;
+    border: none;
+    background: none;
+}
+
+.dice {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dice-img {
+    width: 100px;
+    min-width: 20%;
+    aspect-ratio: 1/1;
+}
+
+#players-table * {
+    text-align: center;
+}
+
+#players-table {
+    margin-left: 5%;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    width: 90%;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 18px;
+}
+
+/* #players-table td {
+    border: 1px solid #000000;
+} */
+
+#players-table th, td {
+    border: 1px solid #000000;
+}
+
+
+#players-table tbody {
+    color:#B21717;
+    font-weight: bold;
+}
+
+.score {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#num-score {
+    margin-top: 20px;
+    color: #B21717;
+    text-decoration: underline;
+}
+
+#back-to-menu-btn {
+    background: #B21717;
 }

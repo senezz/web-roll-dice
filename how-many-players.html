@@ -7,27 +7,31 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div>
+    <header>
         <h1>Roll Dice</h1>
-    </div>
+    </header>
+    <main>
     <label>How many players?</label>
-    <form action="name-of-players.html" method="get">
+    <form class="name-of-players" action="name-of-players.html" method="get">
         <div>
-            <input type="radio" id="inp-two-players" checked 
+            <input class="count-of-players-input" type="radio" id="inp-two-players" checked 
             name="inp-number-of-players" value="2" />
-            <label for="inp-two-players">2P</label>
+            <label class="count-of-players" for="inp-two-players">2P</label>
         </div>
         <div>
-            <input type="radio" id="inp-three-players"
+            <input class="count-of-players-input" type="radio" id="inp-three-players"
             name="inp-number-of-players" value="3" />
-            <label for="inp-three-players">3P</label>
+            <label class="count-of-players" for="inp-three-players">3P</label>
         </div>
          <div>
-            <input type="radio" id="inp-four-players"
+            <input class="count-of-players-input" type="radio" id="inp-four-players"
             name="inp-number-of-players" value="4" />
-            <label for="inp-four-players">4P</label>
+            <label class="count-of-players" for="inp-four-players">4P</label>
         </div>
-        <button type="submit">Proceed</button>
+        </main>
+        <footer>
+            <button type="submit">Proceed</button>
+        </footer>
     </form>
 </body>
 </html>

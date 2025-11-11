@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div>
+    <header>
         <h1>Roll Dice</h1>
-    </div>
-    <div>
+    </header>
+    <main>
         <label for="inp-name-of-players">Name of Player</label>
         <input type="text" id="name-of-player"
         name="inp-name-of-players" placeholder="Enter Name" />
-    </div>
-    <button id="next-btn">Next</button>
-    <a href="./roll-dice-game.html"> 
-        <button id="proceed-btn" class="hidden">Proceed</button>
+    </main>
+    <footer>
+            <button id="next-btn">Next</button>
+    <a class="hidden" id="proceed-btn" href="./roll-dice-game.html"> 
+        <button>Proceed</button>
     </a>
+    </footer>
+    
 
     <script src="./main.js"></script>
     <script src="./name-of-players.js"></script>

@@ -8,39 +8,45 @@
 </head>
 <body>
     <div>
-        <h1>Roll Dice</h1>
+        <header>
+            <h1>Roll Dice</h1>
+        </header>
     </div>
-    <div>
-        <button class="restart-btn">
-            <img src="./assets/restart_icon.svg" alt="restart-game">
-        </button>
-        <button class="menu-btn">
-            <img src="./assets/menu_icon.svg" alt="back-to-menu">
-        </button>
-    </div>
-    <div>
-        <span>Score</span>
-        <span id="num-score">0</span>
-    </div>
-    <div>
-        <img src="./assets/DICE_1.svg" alt="first-dice" class="dice-img">
-        <img src="./assets/DICE_5.svg" alt="second-dice" class="dice-img">
-    </div>
-    <table id="players-table">
-        <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th class="round-cols" scope="col">Round 1</th>
-            <th class="round-cols" scope="col">Round 2</th>
-            <th class="round-cols" scope="col">Round 3</th>
-            <th scope="col">Total</th>
-        </tr>
-        </thead>
-        <tbody>
-            
-        </tbody>
-    </table>
-    <button class="btns-roll" id="rollForPlayerBtn">Roll for Player</button>
+    <main class="roll-dice-game">
+        <div class="nav-buttons">
+            <button class="restart-btn">
+                <img src="./assets/restart_icon.svg" alt="restart-game">
+            </button>
+            <button class="menu-btn">
+                <img src="./assets/menu_icon.svg" alt="back-to-menu">
+            </button>
+        </div>
+        <div class="score">
+            <span>Score</span>
+            <span id="num-score">0</span>
+        </div>
+        <div class="dice">
+            <img src="./assets/DICE_1.svg" alt="first-dice" class="dice-img">
+            <img src="./assets/DICE_5.svg" alt="second-dice" class="dice-img">
+        </div>
+        <table id="players-table">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th class="round-cols" scope="col">Round 1</th>
+                <th class="round-cols" scope="col">Round 2</th>
+                <th class="round-cols" scope="col">Round 3</th>
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <button class="btns-roll" id="rollForPlayerBtn">Roll for Player</button>
+    </footer>
     <script src="./main.js"></script>
     <script type="module" src="./game.js"></script>
 </body>
